@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="center_horizontal|center_vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/appName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register"
+                    android:layout_marginTop="40dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:inputType="text"
+                    android:hint="@string/username"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    />
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPassword"
+                    android:hint="@string/password"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/confirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPassword"
+                    android:hint="@string/confirm"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/registerBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:onClick="onRegister"
+                    android:text="@string/register"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/divider"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <Button
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="onCancel"
+                    android:text="@string/cancel"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </ScrollView>
+
+</LinearLayout>

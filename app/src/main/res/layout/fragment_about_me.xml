@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AboutMeFragment"
+    android:padding="10dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/profile"
+                    app:civ_border_color="@color/blue"
+                    app:civ_border_width="4dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="2dp"
+                    app:civ_shadow_color="@color/black"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aboutMeName"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:paddingTop="20dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aboutMeJob"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:paddingTop="20dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aboutMeSports"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:fontFamily="serif"
+                    android:paddingTop="20dp"
+                    />
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</FrameLayout>

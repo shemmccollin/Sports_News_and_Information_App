@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/news"
+        android:id="@+id/menuNews"
+        android:icon="@drawable/news"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:title="@string/events"
+        android:id="@+id/menuEvents"
+        android:icon="@drawable/events"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:title="@string/archives"
+        android:id="@+id/menuArchives"
+        android:icon="@drawable/archive"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:title="@string/logout"
+        android:id="@+id/menuLogout"
+        android:icon="@drawable/signout"
+        app:showAsAction="ifRoom|withText"/>
+</menu>

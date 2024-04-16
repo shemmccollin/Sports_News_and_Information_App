@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Sports News and Information App</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm">Confirm Password</string>
+    <string name="cancel">Cancel</string>
+    <string name="register">Register</string>
+    <string name="divider">------ OR ------</string>
+    <string name="logout">Sign Out</string>
+    <string name="logoutPrompt">Are you sure you want to log out?</string>
+    <string name="signInBtn">Sign In</string>
+    <string name="sports">Sports</string>
+    <string name="news">News</string>
+    <string name="athletes">Athletes</string>
+    <string name="events">Events</string>
+    <string name="archives">Historical Archives</string>
+    <string name="about">About Me</string>
+    <string name="addBtn">Add Button</string>
+    <string name="addSport">Add New Sports</string>
+    <string name="addNew">Add New News</string>
+    <string name="addAthletes">Add New Athletes</string>
+    <string name="addEvents">Add New Events</string>
+    <string name="addArchive">Add New Historical Sports Archive</string>
+    <string name="sportsName">Sports Name</string>
+    <string name="instructions">Instructions</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="imageUrl">Image Url</string>
+    <string name="athleteName">Athlete Name</string>
+    <string name="sportName">Sport Name</string>
+    <string name="country">Country</string>
+    <string name="bestPerformance">Best Performance</string>
+    <string name="medals">Medals</string>
+    <string name="facts">facts</string>
+    <string name="eventName">Event Name</string>
+    <string name="date">Date</string>
+    <string name="archiveName">History Name</string>
+    <string name="aboutMeName">Shem McCollin</string>
+    <string name="aboutMeJob">Senior Software Engineer</string>
+    <string name="aboutMeSports">Some sports I have played include: Athletics, Basketball, Volleyball, Swimming, Lawn Tennis, Table Tennis, Golf</string>
+
+
+    <string-array name="Categories">
+        <item>Measure</item>
+        <item>Precision</item>
+        <item>Spectacle</item>
+        <item>Combat</item>
+        <item>Play</item>
+    </string-array>
+</resources>
