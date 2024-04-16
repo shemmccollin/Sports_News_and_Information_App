@@ -49,9 +49,17 @@ class RegisterActivity : AppCompatActivity() {
         else
         {
             val db = DBHelper(this, null)
-            db.addUser(binding.username.text.toString(), binding.password.text.toString())
-            Toast.makeText(this, "User added.", Toast.LENGTH_LONG).show()
-            onCancel(view)
+            var cursor = db.doesUserNameExist(binding.username.text.toString())
+
+            if(cursor)
+            {
+                Toast.makeText(this, "Username already exists.", Toast.LENGTH_LONG).show()
+            }
+            else {
+                db.addUser(binding.username.text.toString(), binding.password.text.toString())
+                Toast.makeText(this, "User added.", Toast.LENGTH_LONG).show()
+                onCancel(view)
+            }
         }
     }
 

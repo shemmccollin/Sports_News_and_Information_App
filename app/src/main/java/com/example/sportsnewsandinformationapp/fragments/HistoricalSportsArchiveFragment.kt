@@ -64,8 +64,7 @@ class HistoricalSportsArchiveFragment : Fragment() {
         val archiveName = mView.findViewById<EditText>(R.id.archiveNewName)
         val date = mView.findViewById<EditText>(R.id.archiveNewDate)
         val description = mView.findViewById<EditText>(R.id.archiveNewDescription)
-        var formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy")
-        var savedDate = ""
+
         date.setOnClickListener{
             val today = Calendar.getInstance()
             val year = today.get(Calendar.YEAR)
@@ -73,9 +72,8 @@ class HistoricalSportsArchiveFragment : Fragment() {
             val day = today.get(Calendar.DAY_OF_MONTH)
 
             var dPicker = DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener{ view, myear, mmonth, mday ->
-                val d = "$mmonth-$mday-$myear"
-                date.setText(d)
-                savedDate = LocalDate.of(myear, mmonth, mday).format(formatter)
+                val formatDate = "$mmonth-$mday-$myear"
+                date.setText(formatDate)
             },year, month, day).show()
 
         }
@@ -96,7 +94,7 @@ class HistoricalSportsArchiveFragment : Fragment() {
                 }
                 else
                 {
-                    addArchiveData(archiveName.text.toString(),savedDate, description.text.toString())
+                    addArchiveData(archiveName.text.toString(), date.text.toString(), description.text.toString())
                     Toast.makeText(context, "Event Added", Toast.LENGTH_LONG).show()
                 }
             })
@@ -112,7 +110,7 @@ class HistoricalSportsArchiveFragment : Fragment() {
     private fun retrieveArchiveData(){
         val db = DBHelper(requireContext(), null)
 
-        val cursor = db.getEvents()
+        val cursor = db.getArchives()
 
         if(cursor!!.count > 0) {
             archiveList.clear()

@@ -64,8 +64,7 @@ class EventsFragment : Fragment() {
         val eventsName = mView.findViewById<EditText>(R.id.eventsNewName)
         val date = mView.findViewById<EditText>(R.id.eventsNewDate)
         val description = mView.findViewById<EditText>(R.id.eventsNewDescription)
-        var formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy")
-        var savedDate = ""
+
         date.setOnClickListener{
             val today = Calendar.getInstance()
             val year = today.get(Calendar.YEAR)
@@ -73,9 +72,8 @@ class EventsFragment : Fragment() {
             val day = today.get(Calendar.DAY_OF_MONTH)
 
             var dPicker = DatePickerDialog(requireContext(), DatePickerDialog.OnDateSetListener{view, myear, mmonth, mday ->
-                val d = "$mmonth-$mday-$myear"
-                date.setText(d)
-                savedDate = LocalDate.of(myear, mmonth, mday).format(formatter)
+                val formatDate = "$mmonth-$mday-$myear"
+                date.setText(formatDate)
             },year, month, day).show()
 
         }
@@ -96,7 +94,7 @@ class EventsFragment : Fragment() {
                 }
                 else
                 {
-                    addEventsData(eventsName.text.toString(),savedDate, description.text.toString())
+                    addEventsData(eventsName.text.toString(), date.text.toString(), description.text.toString())
                     Toast.makeText(context, "Event Added", Toast.LENGTH_LONG).show()
                 }
             })

@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
         else
         {
             val db = DBHelper(this, null)
-
             val cursor = db.doesUserExist(binding.username.text.toString(), binding.password.text.toString())
             if(cursor) {
                 val prefs = getSharedPreferences("loginContext", MODE_PRIVATE)

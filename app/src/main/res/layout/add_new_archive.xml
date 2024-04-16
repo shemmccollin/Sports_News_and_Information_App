@@ -32,7 +32,7 @@
     <EditText
         android:id="@+id/archiveNewDescription"
         android:layout_width="390dp"
-        android:layout_height="105dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="10dp"
         android:autofillHints="name"
         android:ems="10"
